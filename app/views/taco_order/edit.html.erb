@@ -1,0 +1,22 @@
+<div class="row" ng-app="AngulaRails" ng-controller="tacoorder">
+	<div class="col-md-6">
+		<h3>add taco to order</h3>
+		<form ng-submit="addtaco()">
+			<div class="form-group">
+				<label for="name">name your creation</label>
+				<input type="text" class="form-control" placeholders="super tasy" ng-model="taco.name"></input>
+			</div>
+			<button class="btn btn-primary">submit</button>
+		</form>
+	</div>
+	<div class="col-md-6">
+		<h3>your order</h3>
+		<table class="table">
+			<tbody>
+				<tr ng-repeat="taco in tacos">
+					<td>{{ taco.name }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
