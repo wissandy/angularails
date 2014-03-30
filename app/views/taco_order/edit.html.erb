@@ -14,14 +14,9 @@
 			</div>
 			<div class="form-group">
 				<label>extras</label>
-				<div class="checkbox">
+				<div class="checkbox" ng-repeat="extra in extras">
 					<label>
-						<input type="checkbox" ng-model="taco.sourcream"></input>sour cream
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" ng-model="taco.guac"></input>guac
+						<input type="checkbox" ng-model="extra.checked"></input>{{extra.name}}
 					</label>
 				</div>
 			</div>
@@ -36,8 +31,9 @@
 					<td>{{ taco.name }}</td>
 					<td>{{ taco.filling }}</td>
 					<td>
-						<span ng-show="taco.sourcream">sour cream</span>
-						<span ng-show="taco.guac">guac</span>
+						<span ng-repeat="extra in taco.extras">
+						{{extra}}
+						</span>
 					</td>
 				</tr>
 			</tbody>
