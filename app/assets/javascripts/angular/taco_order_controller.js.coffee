@@ -3,6 +3,7 @@ AngulaRails.controller "tacoorder", ($scope) ->
 	$scope.taco = {}
 	$scope.fillings = ["beef", "chicken", "fish", "carnitas"]
 	$scope.extras = [{name: "sour cream"}, {name: "guac"}, {name: "salsa"}]
+	$scope.cheeses = ["no cheese", "normal cheese", "mucho queso", "monterrey jack"]
 
 	$scope.clear = () ->
 		$scope.taco = {}
