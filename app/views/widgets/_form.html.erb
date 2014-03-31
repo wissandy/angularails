@@ -14,11 +14,15 @@
 
     <div class="form-group" ng-class="{ 'has-error': widgetform['widget[name]'].$invalid }">
       <%= f.label :name %><br>
-      <%= f.text_field :name, class: "form-control", "ng-model" => "name", required: true %>
+      <%= f.text_field :name, class: "form-control", "ng-model" => "name", required: true, "ng-minlength" => "7" %>
+      <span class="help-block" ng-show="widgetform['widget[name]'].$error.required">required</span>
+      <span class="help-block" ng-show="widgetform['widget[name]'].$error.minlength">minimum length of 7</span>
     </div>
     <div class="form-group" ng-class="{ 'has-error': widgetform['widget[price]'].$invalid }">
       <%= f.label :price %><br>
       <%= f.number_field :price, class: "form-control", "ng-model" => "price", required: true, "min" => "10" %>
+      <span class="help-block" ng-show="widgetform['widget[price]'].$error.required">a number is required</span>
+      <span class="help-block" ng-show="widgetform['widget[price]'].$error.min">most be greater than 10</span>
     </div>
     <div class="actions">
       <%= f.submit "save", class: "btn btn-primary", "ng-disabled" => "widgetform.$invalid" %>
