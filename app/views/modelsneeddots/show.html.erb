@@ -1,2 +1,15 @@
-<h1>Modelsneeddots#show</h1>
-<p>Find me in app/views/modelsneeddots/show.html.erb</p>
+<div ng-app="AngulaRails" ng-controller="modelsneeddots">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>oh noes</h1>
+			message is "{{message}}"
+			<input type="text" class="form-control" ng-model="message">
+			<ul class="list-unstyled">
+				<li ng-repeat="s in stuff" style="margin-top: 10px">
+					message is "{{message}}"
+					<input type="text" class="form-control" ng-model="message">
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
