@@ -1,4 +1,6 @@
 Angularails::Application.routes.draw do
+  resources :widgets
+
   get "modelsneeddots/show"
   get "taco_order/edit"
   get "hello_angular/show"
