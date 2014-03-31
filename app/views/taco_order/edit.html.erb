@@ -20,6 +20,24 @@
 					</label>
 				</div>
 			</div>
+			<div class="form-group">
+				<label>cheese</label>
+				<div class="radio">
+					<label>
+						<input type="radio" value="no cheese" ng-model="taco.cheese">no cheese
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" value="normal cheese" ng-model="taco.cheese">normal cheese
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" value="mucho queso" ng-model="taco.cheese">mucho queso
+					</label>
+				</div>
+			</div>
 			<button class="btn btn-primary">submit</button>
 		</form>
 	</div>
@@ -35,6 +53,7 @@
 						{{extra}}
 						</span>
 					</td>
+					<td>{{taco.cheese}}</td>
 				</tr>
 			</tbody>
 		</table>
